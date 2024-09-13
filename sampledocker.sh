@@ -4,7 +4,7 @@ FROM node:18-alpine AS builder
 
 # Set environment variables
 # ENV variables help in configuring your app dynamically
-ENV NODE_ENV=development
+# ENV NODE_ENV=development
 
 # Install dependencies for native build tools
 RUN apk add --no-cache python3 make g++
@@ -30,7 +30,7 @@ RUN npm run build
 FROM node:18-alpine
 
 # ENV variables can be set for production in the second stage
-ENV NODE_ENV=production
+# ENV NODE_ENV=production
 
 # Define a volume for persistent data storage
 # VOLUME can be used to mount data into the container from the host system
