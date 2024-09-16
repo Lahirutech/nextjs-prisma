@@ -1,6 +1,6 @@
 import prisma from "@/utils/connect";
 import { NextResponse } from "next/server";
-
+export const runtime = "edge";
 export const GET = async () => {
   try {
     const users = await prisma.user.findMany();
