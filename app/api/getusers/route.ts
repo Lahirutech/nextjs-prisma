@@ -1,8 +1,12 @@
-import prisma from "@/utils/connect";
+ import prisma from "@/utils/connect";
+import { PrismaClient } from "@prisma/client";
+import { withAccelerate } from "@prisma/extension-accelerate";
 import { NextResponse } from "next/server";
-export const runtime = "edge";
+
+
 export const GET = async () => {
   try {
+
     const users = await prisma.user.findMany();
     return new NextResponse(JSON.stringify({ message: users, status: 200 }));
   } catch (err) {
