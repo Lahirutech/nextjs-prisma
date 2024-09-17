@@ -15,9 +15,10 @@ interface GetUsersResponse {
 export async function getUsers(): Promise<GetUsersResponse> {
     try {
         // Ensure we're using an absolute URL
-        const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
+        const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'https';
         const host = headers().get('host') || 'localhost:3000';
         const url = `${protocol}://${host}/api/getusers`;
+        console.log("🚀 ~ getUsers ~ host:", host)
 
         const response = await fetch(url, {
             cache: 'no-store',
