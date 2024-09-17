@@ -10,6 +10,7 @@ interface GetUsersResponse {
   message: User[];
   status: number;
 }
+export const runtime = "edge";
 
 export default async function UserList() {
   const { message: users, status }: GetUsersResponse = await getUsers();
