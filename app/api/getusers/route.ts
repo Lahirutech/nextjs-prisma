@@ -1,6 +1,4 @@
- import prisma from "@/utils/connect";
-import { PrismaClient } from "@prisma/client";
-import { withAccelerate } from "@prisma/extension-accelerate";
+import prisma from "@/utils/connect";
 import { NextResponse } from "next/server";
 
 
