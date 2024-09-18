@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navbarContainer}>
         <Link href="/" className={styles.navbarLogo}>
-          YourLogo
+          Logo
         </Link>
         <div
           className={`${styles.navbarBurger} ${isOpen ? styles.active : ""}`}
@@ -27,12 +27,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/about" className={styles.navbarItem}>
+            <Link href="/#" className={styles.navbarItem}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/services" className={styles.navbarItem}>
+            <Link href="/pricing" className={styles.navbarItem}>
               Services
             </Link>
           </li>
