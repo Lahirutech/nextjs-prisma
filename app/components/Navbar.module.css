@@ -1,0 +1,89 @@
+/* components/Navbar.module.css */
+.navbar {
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbarLogo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbarMenu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarItem {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbarItem:hover {
+  color: #00a8ff;
+}
+
+.navbarBurger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbarBurger span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbarMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+  }
+
+  .navbarMenu.active {
+    display: flex;
+  }
+
+  .navbarItem {
+    padding: 1rem 2rem;
+  }
+
+  .navbarBurger {
+    display: flex;
+  }
+
+  .navbarBurger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navbarBurger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbarBurger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
