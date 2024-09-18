@@ -27,7 +27,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#" className={styles.navbarItem}>
+            <Link href="/" className={styles.navbarItem}>
               About
             </Link>
           </li>
@@ -37,7 +37,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className={styles.navbarItem}>
+            <Link href="/" className={styles.navbarItem}>
               Contact
             </Link>
           </li>
